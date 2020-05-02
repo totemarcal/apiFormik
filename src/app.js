@@ -11,14 +11,12 @@ app.use(express.urlencoded({extended: true}));
 
 // usamos o mongoose para criar uma conexão com a 
 // connection string do banco de dados que passamos no arqvuio .env
-console.log("DATABASE_CONNECTION_STRING");
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
     useUnifiedTopology: true,
     useFindAndModify: true,
     useNewUrlParser: true,
     useCreateIndex: true 
 });
-console.log("FIMMMMMMMM");
 const db = mongoose.connection;
   
 db.on('connected', () => {
@@ -47,12 +45,10 @@ const userFormik = require('./models/userFormik');
 
 // Load routes
 const indexRoutes = require('./routes/index-routes');
-console.log("listUserFormik1");
 // Chama a primeira rota '/'
 app.use('/', indexRoutes);
 
 const userFomikRoutes = require('./routes/userFomik-routes');
-console.log("listUserFormik2");
 app.use('/user', userFomikRoutes);
 
 module.exports = app;
