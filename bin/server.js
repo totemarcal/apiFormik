@@ -1,4 +1,4 @@
-const app = require('../src/app');
+const app = require('../index.js');
 const http = require('http');
 const debug = require('debug')('nodestr:server');
 
@@ -6,7 +6,6 @@ const debug = require('debug')('nodestr:server');
 // PORT // based on express-generator
 function normalizePort(val) {
   const port = parseInt(val, 10);
-
   if (isNaN(port)) {
     return val;
   }
@@ -51,7 +50,9 @@ function onListening() {
 }
 
 // server
+console.log("2")
 const server = http.createServer(app);
+console.log("1")
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
