@@ -1,4 +1,4 @@
-const app = require('../index.js');
+const app = require('../src/app');
 const http = require('http');
 const debug = require('debug')('nodestr:server');
 
@@ -50,9 +50,7 @@ function onListening() {
 }
 
 // server
-console.log("2")
 const server = http.createServer(app);
-console.log("1")
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
