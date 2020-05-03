@@ -2,10 +2,13 @@
   "name": "apiformik",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node":"12.8.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node node_modules/nodemon/bin/nodemon bin/server",
-    "start": "node ./src/app.js"
+    "start": "node ./bin/server.js"
   },
   "repository": {
     "type": "git",
