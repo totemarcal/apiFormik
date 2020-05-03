@@ -11,6 +11,7 @@ app.use(express.urlencoded({extended: true}));
 
 // usamos o mongoose para criar uma conexão com a 
 // connection string do banco de dados que passamos no arqvuio .env
+
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
     useUnifiedTopology: true,
     useFindAndModify: true,
