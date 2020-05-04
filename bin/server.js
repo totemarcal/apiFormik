@@ -19,6 +19,7 @@ function normalizePort(val) {
 
 const port = normalizePort(process.env.PORT || 3005);
 app.set('port', port);
+console.log("PORTA: "+ port)
 
 // error handler
 function onError(error) {
